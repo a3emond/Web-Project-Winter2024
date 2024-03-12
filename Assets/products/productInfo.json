@@ -1,28 +1,388 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Product 1",
+      "id": "logo1",
+      "name": "PewPew 1",
       "price": 19.99,
-      "description": "This is the description for product 1.",
-      "category": "Category 1",
-      "image": "product1.jpg"
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee1PewPewBrand.png"
+    },
+    {
+      "id": "logo2",
+      "name": "PewPew 2",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee1PewPewBrand2.png"
+    },
+    {
+      "id": 1,
+      "name": "OF-Donut",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee1.png"
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "price": 29.99,
-      "description": "This is the description for product 2.",
-      "category": "Category 2",
-      "image": "product2.jpg"
+      "name": "Twitter",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee2.png"
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "price": 39.99,
-      "description": "This is the description for product 3.",
-      "category": "Category 1",
-      "image": "product3.jpg"
+      "name": "Smiley-Melting",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee3.png"
+    },
+    {
+      "id": 4,
+      "name": "Monster",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee4.png"
+    },
+    {
+      "id": 5,
+      "name": "Obey",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee5.png"
+    },
+    {
+      "id": 6,
+      "name": "Bunny",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee6.png"
+    },
+    {
+      "id": 7,
+      "name": "Coca-Cola",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee7.png"
+    },
+    {
+      "id": 8,
+      "name": "WiFi",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee8.png"
+    },
+    {
+      "id": 9,
+      "name": "BK",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee9.png"
+    },
+    {
+      "id": 10,
+      "name": "Fanta",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee10.png"
+    },
+    {
+      "id": 11,
+      "name": "Jurassic Park",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee11.png"
+    },
+    {
+      "id": 12,
+      "name": "Lay's",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee12.png"
+    },
+    {
+      "id": 13,
+      "name": "Pug",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee13.png"
+    },
+    {
+      "id": 14,
+      "name": "HelloKitty-Metal",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee14.png"
+    },
+    {
+      "id": 15,
+      "name": "Pizza Hut",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee15.png"
+    },
+    {
+      "id": 16,
+      "name": "Beats",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee16.png"
+    },
+    {
+      "id": 17,
+      "name": "Ghost-Smiling",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee17.png"
+    },
+    {
+      "id": 18,
+      "name": "SantaCruz",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee18.png"
+    },
+    {
+      "id": 19,
+      "name": "TikTok-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee19.png"
+    },
+    {
+      "id": 20,
+      "name": "Bart-Unholy",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee20.png"
+    },
+    {
+      "id": 21,
+      "name": "Ghost Busters",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee21.png"
+    },
+    {
+      "id": 22,
+      "name": "Lacoste-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee22.png"
+    },
+    {
+      "id": 23,
+      "name": "Smurf",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee23.png"
+    },
+    {
+      "id": 24,
+      "name": "Tagging",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee24.png"
+    },
+    {
+      "id": 25,
+      "name": "Bunny-Smiley",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee25.png"
+    },
+    {
+      "id": 26,
+      "name": "BooGhost",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee26.png"
+    },
+    {
+      "id": 27,
+      "name": "Trasher-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee27.png"
+    },
+    {
+      "id": 28,
+      "name": "Flush",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee28.png"
+    },
+    {
+      "id": 29,
+      "name": "TuneSquad-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee29.png"
+    },
+    {
+      "id": 30,
+      "name": "RollingStone-SK8",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee30.png"
+    },
+    {
+      "id": 31,
+      "name": "Mario-Bros",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee31.png"
+    },
+    {
+      "id": 32,
+      "name": "NewBalance-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee32.png"
+    },
+    {
+      "id": 33,
+      "name": "Shell-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee33.png"
+    },
+    {
+      "id": 34,
+      "name": "RedBull-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee34.png"
+    },
+    {
+      "id": 35,
+      "name": "Pringles-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee35.png"
+    },
+    {
+      "id": 36,
+      "name": "UNIQLO-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee36.png"
+    },
+    {
+      "id": 37,
+      "name": "LooneyTunes-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee37.png"
+    },
+    {
+      "id": 38,
+      "name": "Mickey-StormTrooper",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee38.png"
+    },
+    {
+      "id": 39,
+      "name": "Fritos-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee39.png"
+    },
+    {
+      "id": 40,
+      "name": "Tostitos-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee40.png"
+    },
+    {
+      "id": 41,
+      "name": "HardRock-Cafe-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee41.png"
+    },
+    {
+      "id": 42,
+      "name": "WierdMonster",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee42.png"
+    },
+    {
+      "id": 43,
+      "name": "Palace-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee43.png"
+    },
+    {
+      "id": 44,
+      "name": "Oreo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee44.png"
+    },
+    {
+      "id": 45,
+      "name": "Zippo-Logo",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee45.png"
+    },
+    {
+      "id": 46,
+      "name": "WierdGuy",
+      "price": 19.99,
+      "description": "T-shirt manches courtes Unisex.",
+      "category": "PewPew",
+      "image": "Assets\\products\\productImage\\tee46.png"
     }
   ]
 }
