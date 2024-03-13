@@ -1,4 +1,115 @@
 /*import other stylesheet*/
-@import url("styles1.css");
+
+/*@import url("styles1.css");
 @import url("styles2.css");
-@import url("styles3.css");
+@import url("styles3.css");*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  /*color palette*/
+  --dark: #232931;
+  --lightDark: #393e46;
+  --light: #533483;
+  --accent: #e94560;
+
+  /*Buttons color*/
+  --buttonDark: #232931;
+  --buttonLightDark: #393e46;
+  --buttonLight: #4ecca3;
+  --buttonAccent: #eeeeee;
+
+  /*Font colors*/
+  --blackFont: #000000;
+  --whiteFont: #ffffff;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*button styles*/
+.button {
+  margin: 0 1rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--buttonAccent);
+  background: linear-gradient(
+    0deg,
+    var(--buttonDark),
+    var(--buttonLightDark),
+    var(--buttonDark)
+  );
+  border: solid 1px var(--buttonLight);
+  box-shadow: 0 0 10px var(--buttonLight);
+  transition: 0.15s;
+}
+.button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+.button:active {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
+
+#main {
+  flex: 1 0 auto;
+  background-color: var(--lightDark);
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 4);
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.flex-full-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-background {
+  background-color: var(--dark);
+  color: var(--whiteFont);
+}
+.light-dark-background {
+  background-color: var(--lightDark);
+  color: var(--whiteFont);
+}
+.light-background {
+  background-color: var(--light);
+  color: var(--whiteFont);
+}
+.border-bottom {
+  border-bottom: 1px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+.border-top {
+  border-top: 1px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}

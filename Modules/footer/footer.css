@@ -1,0 +1,5 @@
+@import url("../../mainStyle.css");
+.footer {
+  height: 2rem;
+  padding: 0 100px;
+}

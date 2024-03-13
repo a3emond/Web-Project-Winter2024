@@ -1,0 +1,13 @@
+@import url("../../mainStyle.css");
+.logo1 {
+  width: 15%;
+}
+.logo2 {
+  width: 30%;
+}
+.logo3 {
+  width: 10%;
+}
+.header {
+  padding: 0 10%;
+}

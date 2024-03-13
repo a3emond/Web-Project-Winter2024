@@ -1,0 +1,45 @@
+@import url("../../mainStyle.css");
+.navBar {
+  height: 70px;
+  z-index: 100;
+}
+button {
+  width: 200px;
+}
+.user {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20%;
+  margin-right: 10%;
+}
+.time {
+  color: var(--buttonDark);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 6rem;
+  text-shadow: 0 0 5px var(--buttonLight);
+  box-shadow: 0 0 10px var(--buttonLight);
+  filter: saturate(200%);
+}
+.cartContainer {
+  position: relative;
+}
+.cartContainer:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+.cart {
+  width: 40px;
+}
+
+.cartCount {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  background-color: var(--buttonAccent);
+  color: var(--buttonDark);
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.8rem;
+  z-index: 100;
+}
