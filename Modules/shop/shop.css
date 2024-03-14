@@ -43,13 +43,18 @@ img {
   filter: brightness(0.8);
   box-shadow: none;
 }
-#controls {
-  display: flex;
+#colorPanel {
+  display: none;
+  position: absolute;
   justify-items: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 700px;
   margin: 0 auto;
+  width: 182px;
+  background-color: var(--buttonLight);
+  border: solid 1px var(--accent);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--accent);
 }
 .colorImg {
   width: 20px;
