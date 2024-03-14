@@ -106,7 +106,15 @@ function openColorPanel(event) {
   }
 }
 
-function addToCart() {
-  document.getElementById("cartCount").innerHTML++;
+function addToCart(event) {
+  let addedPanel = document.querySelector(".addedToCart");
+  document.getElementById("cartCount").innerHTML++; // to transfer
+  if (addedPanel.style.display === "block") {
+    addedPanel.style.display = "none";
+  } else {
+    addedPanel.style.display = "block";
+    addedPanel.style.top = event.pageY + 10 + "px";
+    addedPanel.style.left = event.pageX + 10 + "px";
+  }
   //implement saving objects with specs to display in cart
 }

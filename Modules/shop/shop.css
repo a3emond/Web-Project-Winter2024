@@ -61,3 +61,38 @@ img {
   border-radius: 10px;
   margin: 5px;
 }
+
+.addedToCart {
+  display: none;
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 0 auto;
+  width: 300px;
+  background-color: var(--buttonLight);
+  border: solid 1px var(--accent);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--accent);
+}
+.buttonItemAdded {
+  background-color: var(--accent);
+  color: var(--buttonAccent);
+  width: 100px;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent);
+  border: solid 5px var(--dark);
+  transition: 0.15s;
+}
+.buttonItemAdded:hover {
+  filter: brightness(1.2);
+}
+.buttonItemAdded:active {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
