@@ -6,7 +6,7 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee1PewPewBrand.png"
+      "image": "Assets\\products\\productImage\\teePewPewBrand.png"
     },
     {
       "id": "logo2",
@@ -14,7 +14,7 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee1PewPewBrand2.png"
+      "image": "Assets\\products\\productImage\\teePewPewBrand2.png"
     },
     {
       "id": 1,

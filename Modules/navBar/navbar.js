@@ -1,3 +1,4 @@
+import { initializeShop } from "../shop/shop.js";
 export function initializeNavbar() {
   let btnShop = document.getElementById("btnShop");
   let btnAbout = document.getElementById("btnAbout");
@@ -13,6 +14,7 @@ export function initializeNavbar() {
       .then((response) => response.text())
       .then((data) => {
         mainDisplay.innerHTML = data;
+        initializeShop();
       });
   });
 

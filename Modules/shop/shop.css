@@ -1,1 +1,58 @@
- 
+@import url("../../mainStyle.css");
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+.item {
+  padding: 10px;
+  border: solid 1px #000;
+  margin: 10px;
+  background-color: var(--dark);
+  color: var(--buttonAccent);
+  border-radius: 10px;
+}
+img {
+  width: 200px;
+  border-radius: 10px;
+}
+.addToCart {
+  background-color: var(--accent);
+  color: var(--buttonAccent);
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent);
+  border: solid 5px var(--dark);
+  transition: 0.15s;
+}
+.addToCart:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+.addToCart:active {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
+#controls {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.colorImg {
+  width: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
