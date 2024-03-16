@@ -1,6 +1,9 @@
+import { products, colors, InitializeData } from "./globalVariables.js";
 import { initializeNavbar } from "./Modules/navBar/navbar.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  //initialize data
+  InitializeData();
   //import header html
   fetch("Modules/header/header.html")
     .then((response) => response.text())

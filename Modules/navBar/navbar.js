@@ -7,7 +7,6 @@ export function initializeNavbar() {
   let cartCount = document.getElementById("cartCount");
   let time = document.getElementById("time");
   let mainDisplay = document.getElementById("main");
-  console.log(mainDisplay);
 
   btnShop.addEventListener("click", function () {
     fetch("Modules/shop/shop.html")

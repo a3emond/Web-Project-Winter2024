@@ -1,102 +1,43 @@
-// Purpose: Shop module for the shop page.
-
+//import global variables
+import { products, colors } from "../../globalVariables.js";
 //initialize shop
 export function initializeShop() {
-  // Product elements and functions
-  function createItem(productName, description, price, imgPath) {
-    let item = document.createElement("div");
-    item.className = "item";
-    item.innerHTML = `
-    
-        <img src="${imgPath}" alt="${productName}">
-        <div style="font-size:0.5rem; display:flex; align-items: center; margin-left:20px;">
-        <img class="colorPicker" style="width:20px; cursor:pointer;" src="../../Assets/products/colorsImage/c2.png" alt="colorPicker">
-        Pick a Color
-        </div>
-        <h3>${productName}</h3>
-        <p>${description}</p>
-        <p>${price}</p>
-        <button class="addToCart" >Add to cart</button>
-      `;
-    return item;
+  // Loop through the products array
+  for (let item of products) {
+    // Append the item to the DOM
+    document.getElementById("container").appendChild(item);
+    //add event listener to color picker
+    document
+      .querySelectorAll(".colorPicker")
+      .forEach((element) => element.addEventListener("click", openColorPanel));
+    document.querySelectorAll(".addToCart").forEach((element) => {
+      element.addEventListener("click", addToCart);
+    });
   }
 
-  // Fetch the JSON file
-  fetch("../../Assets/products/productInfo.json")
-    .then((response) => response.json()) // Parse the data as JSON
-    .then((data) => {
-      // Loop through the products array
-      for (let product of data.products) {
-        // Create an item for each product
-        let item = createItem(
-          product.name,
-          product.description,
-          product.price,
-          product.image
-        );
-        // Append the item to the DOM
-        document.getElementById("container").appendChild(item);
-        //add event listener to color picker
-        document
-          .querySelectorAll(".colorPicker")
-          .forEach((element) =>
-            element.addEventListener("click", openColorPanel)
-          );
-        document.querySelectorAll(".addToCart").forEach((element) => {
-          element.addEventListener("click", addToCart);
-        });
-      }
-    });
-
-  //
-  //
   //color Picker elements
-
   let colorPanel = document.getElementById("colorPanel");
-  let colorName = [];
-  let colorHex = [];
-
-  function createColorItem(colorName, imgPath, colorId) {
-    let colorItem = document.createElement("div");
-    colorItem.id = colorId;
-    colorItem.className = "colorItem";
-    colorItem.innerHTML = `
-        <img class="colorImg" src="${imgPath}" alt="${colorName}">`;
-
-    return colorItem;
+  for (let colorItem of colors) {
+    // Append the item to the DOM
+    document.getElementById("colorPanel").appendChild(colorItem);
+    colorItem.style.cursor = "pointer";
+    colorItem.addEventListener("click", (event) =>
+      changeTshirtColor(colorItem.hex, event)
+    );
   }
-
-  //fetch colors and fill color panel
-  fetch("../../Assets/products/colors.json")
-    .then((response) => response.json()) // Parse the data as JSON
-    .then((data) => {
-      // Loop through the products array
-      for (let color of data.colors) {
-        //fill arrays
-        colorName.push(color.name);
-        colorHex.push(color.hex);
-        // Create an item for each product
-        let colorItem = createColorItem(color.name, color.image);
-        // Append the item to the DOM
-        document.getElementById("colorPanel").appendChild(colorItem);
-        colorItem.style.cursor = "pointer";
-        colorItem.addEventListener("click", (event) =>
-          changeTshirtColor(color.hex, event)
-        );
-      }
-    });
 }
+
+//color picker functions
 let tshirt;
 function changeTshirtColor(colorHex, event) {
   var panel = event.currentTarget.parentElement;
   console.log(panel);
   tshirt.style.backgroundColor = colorHex;
+  panel.style.display = "none";
 }
 
 function openColorPanel(event) {
   tshirt = event.currentTarget.parentElement.parentElement.querySelector("img");
-  console.log(tshirt);
-  console.log("color panel opened");
   if (colorPanel.style.display === "flex") {
     colorPanel.style.display = "none";
   } else {
@@ -106,9 +47,11 @@ function openColorPanel(event) {
   }
 }
 
+//add to cart section
+//take care of the add to cart button and the added to cart panel
+//to confirm the addition
 function addToCart(event) {
-  let addedPanel = document.querySelector(".addedToCart");
-  document.getElementById("cartCount").innerHTML++; // to transfer
+  let addedPanel = document.querySelector(".addedToCartPanel");
   if (addedPanel.style.display === "block") {
     addedPanel.style.display = "none";
   } else {
@@ -116,5 +59,33 @@ function addToCart(event) {
     addedPanel.style.top = event.pageY + 10 + "px";
     addedPanel.style.left = event.pageX + 10 + "px";
   }
-  //implement saving objects with specs to display in cart
+
+  let okButton = document.getElementById("okButton");
+  okButton.dataset.hasEventListener = false;
+  let cancelButton = document.getElementById("cancelButton");
+  cancelButton.dataset.hasEventListener = false;
+  let goToCartButton = document.getElementById("goToCartButton");
+  goToCartButton.dataset.hasEventListener = false;
+
+  if (!okButton.hasEventListener) {
+    okButton.addEventListener("click", (event) => {
+      document.getElementById("cartCount").innerHTML++;
+      addedPanel.style.display = "none";
+      //update cart and user data
+      //here
+    });
+    okButton.hasEventListener = true;
+  }
+
+  if (!cancelButton.hasEventListener) {
+    cancelButton.addEventListener("click", () => {
+      addedPanel.style.display = "none";
+    });
+    cancelButton.hasEventListener = true;
+  }
+
+  if (!goToCartButton.hasEventListener) {
+    goToCartButton.addEventListener("click", () => {});
+    goToCartButton.hasEventListener = true;
+  }
 }
