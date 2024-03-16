@@ -1,8 +1,5 @@
 /*import other stylesheet*/
 
-/*@import url("styles1.css");
-@import url("styles2.css");
-@import url("styles3.css");*/
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +22,13 @@
   /*Font colors*/
   --blackFont: #000000;
   --whiteFont: #ffffff;
+}
+#main {
+  background-image: url("../../Assets/shop.png");
+  width: 100%;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: center -400px;
 }
 body {
   display: flex;

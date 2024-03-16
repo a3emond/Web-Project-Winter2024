@@ -1,5 +1,6 @@
 import { products, colors, InitializeData } from "./globalVariables.js";
 import { initializeNavbar } from "./Modules/navBar/navbar.js";
+import { initializeSignUp } from "./Modules/signUp/signUp.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   //initialize data
@@ -9,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
+    });
+
+  //import signUp html
+  fetch("Modules/signUp/signUp.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("main").innerHTML = data;
+      initializeSignUp();
     });
 
   //import navBar html
