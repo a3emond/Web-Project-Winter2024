@@ -1,14 +1,17 @@
 <link rel="stylesheet" href="Modules/navBar/navBar.css" />
-<div class="navBar container flex-full-center dark-background border-bottom">
+<div class="navBar container dark-background border-bottom">
   <button id="btnShop" class="button">Shop/Magasiner</button>
   <button id="btnAbout" class="button">About Us/Nous Connaitre</button>
   <button id="btnContact" class="button">Contact Us/Nous Contacter</button>
-  <div class="user">Bonjour,&nbsp;"userName".</div>
+  <div id="time" class="time">HH:MM:SS</div>
+
+  <div id="username"><!--username from localStorage here--></div>
   <div class="cartContainer" id="cart">
     <img src="../../Assets/others/cart.ico" alt="cart" class="cart" />
     <div id="cartCount" class="cartCount">0</div>
   </div>
-  <div id="time" class="time">HH:MM:SS</div>
+  <button id="logOut" class="button">Log Out/Se Deconnecter</button>
+
   <script src="../../mainScript.js" type="module"></script>
   <script src="../shop/shop.js" type="module"></script>
 </div>

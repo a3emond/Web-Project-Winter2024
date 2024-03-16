@@ -37,7 +37,6 @@ body {
 }
 /*button styles*/
 .button {
-  margin: 0 1rem;
   padding: 5px 10px;
   border-radius: 10px;
   color: var(--buttonAccent);

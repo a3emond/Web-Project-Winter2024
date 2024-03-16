@@ -5,28 +5,20 @@ import { initializeSignUp } from "./Modules/signUp/signUp.js";
 document.addEventListener("DOMContentLoaded", function () {
   //initialize data
   InitializeData();
-  //import header html
-  fetch("Modules/header/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header").innerHTML = data;
-    });
+  primeInit();
+});
 
-  //import signUp html
-  fetch("Modules/signUp/signUp.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("main").innerHTML = data;
-      initializeSignUp();
-    });
-
-  //import navBar html
-  fetch("Modules/navBar/navBar.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("navBar").innerHTML = data;
-      initializeNavbar(); //function to call the navbar with functionalities in navbar.js
-    });
+export function primeInit() {
+  if (localStorage.getItem("signedIn") !== "true") {
+    fetch("Modules/signUp/signUp.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("main").innerHTML = data;
+        initializeSignUp();
+      });
+  } else {
+    initializeUi();
+  }
 
   //import footer html
   fetch("Modules/footer/footer.html")
@@ -34,4 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       document.getElementById("footer").innerHTML = data;
     });
-});
+}
+
+export function initializeUi() {
+  //import header html
+  fetch("Modules/header/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header").innerHTML = data;
+    });
+  //import navBar html
+  fetch("Modules/navBar/navBar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("navBar").innerHTML = data;
+      initializeNavbar(); //function to call the navbar with functionalities in navbar.js
+    });
+}

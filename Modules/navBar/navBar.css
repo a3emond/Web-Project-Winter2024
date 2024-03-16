@@ -1,5 +1,8 @@
 @import url("../../mainStyle.css");
 .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 70px;
   z-index: 100;
 }
@@ -12,13 +15,10 @@ button {
   margin-right: 10%;
 }
 .time {
-  color: var(--buttonDark);
+  color: var(--accent);
   padding: 5px;
   border-radius: 5px;
   margin-left: 6rem;
-  text-shadow: 0 0 5px var(--buttonLight);
-  box-shadow: 0 0 10px var(--buttonLight);
-  filter: saturate(200%);
 }
 .cartContainer {
   position: relative;

@@ -1,4 +1,5 @@
 import { initializeShop } from "../shop/shop.js";
+import { primeInit } from "../../mainScript.js";
 export function initializeNavbar() {
   let btnShop = document.getElementById("btnShop");
   let btnAbout = document.getElementById("btnAbout");
@@ -7,7 +8,24 @@ export function initializeNavbar() {
   let cartCount = document.getElementById("cartCount");
   let time = document.getElementById("time");
   let mainDisplay = document.getElementById("main");
+  document.getElementById("username").textContent =
+    "Bonjour, " + localStorage.getItem("username");
 
+  //logout
+  document.getElementById("logOut").addEventListener("click", function () {
+    console.log("logging out");
+    // Clear localStorage
+    localStorage.clear();
+    localStorage.setItem("signedIn", "false");
+    // reload index.html
+    primeInit();
+    location.reload();
+    fetch("index.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("main").parentElement.innerHTML = data;
+      });
+  });
   btnShop.addEventListener("click", function () {
     fetch("Modules/shop/shop.html")
       .then((response) => response.text())
@@ -48,3 +66,4 @@ export function initializeNavbar() {
   updateTime(); // Call the function once to start the timer
   setInterval(updateTime, 1000); // Call the function every second
 }
+// greet user

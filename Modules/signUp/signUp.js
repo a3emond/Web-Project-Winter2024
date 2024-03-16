@@ -1,5 +1,48 @@
-function initializeSignUp() {
-  // Add event listener to form
+import { users } from "../../globalVariables.js";
+import { initializeUi } from "../../mainScript.js";
+export function initializeSignUp() {
+  // signInForm
+  document
+    .getElementById("signInForm")
+    .addEventListener("submit", function (event) {
+      // Prevent the form from submitting normally
+      event.preventDefault();
+      // Get form values
+      let username = document.getElementById("usernameSignIn").value;
+      let password = document.getElementById("passwordSignIn").value;
+      // Check if username and password are valid
+      let user = users.find((user) => user.username === username);
+      if (user === undefined) {
+        alert("Username not found");
+        document.getElementById("usernameSignIn").style.borderColor = "red";
+        return;
+      }
+      if (user.password !== password) {
+        alert("Incorrect password");
+        document.getElementById("passwordSignIn").style.borderColor = "red";
+        return;
+      }
+      // Set signedIn to true in localStorage
+      localStorage.setItem("signedIn", "true");
+      localStorage.setItem("username", user.username);
+
+      //load UI
+      initializeUi();
+      document.getElementById("mainContainer").innerHTML =
+        "<h1 style='color:white; font-size: 50px;' >Welcome " +
+        user.username +
+        "</h1>";
+    });
+  //new user sign up
+  document
+    .getElementById("signUpButton")
+    .addEventListener("click", function () {
+      //hide signIn form
+      document.getElementById("signInContainer").style.display = "none";
+      // Show sign up form
+      document.getElementById("signUpContainer").style.display = "block";
+    });
+  // Add event listener to signUp form
   document
     .getElementById("signUpForm")
     .addEventListener("submit", function (event) {
@@ -12,6 +55,14 @@ function initializeSignUp() {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
       let confirmPassword = document.getElementById("confirmPassword").value;
+      console.log(
+        firstName,
+        lastName,
+        email,
+        username,
+        password,
+        confirmPassword
+      );
       //check for empty fields
       if (
         firstName === "" ||
@@ -31,7 +82,7 @@ function initializeSignUp() {
         return;
       }
       // Check if passwords match
-      if (password !== confirmPassword) {
+      if (password != confirmPassword) {
         document.getElementById("password").style.borderColor = "red";
         document.getElementById("confirmPassword").style.borderColor = "red";
         alert("Passwords do not match");
@@ -46,17 +97,8 @@ function initializeSignUp() {
         password: password,
         role: "user",
       };
-      // Send form data to server
-      fetch("http://localhost:3000/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
-        .then((response) => response.json())
-        .then((data) => console.log("Success:", data))
-        .catch((error) => console.error("Error:", error));
+      users.push(user);
+      document.getElementById("signUpContainer").style.display = "none";
+      document.getElementById("signInContainer").style.display = "block";
     });
 }
-export { initializeSignUp };

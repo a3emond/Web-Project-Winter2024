@@ -6,8 +6,23 @@
       <img src="..\..\Assets\PewPewTees.com.png" alt="Logo" />
     </div>
   </div>
-  <div id="signUpContainer">
-    <form id="signUpForm">
+  <div id="signInContainer" class="formContainer">
+    <form id="signInForm" class="form">
+      <h1>Sign In</h1>
+      <label for="username">Username:</label><br />
+      <input type="text" id="usernameSignIn" name="username" /><br />
+      <label for="password">Password:</label><br />
+      <input type="password" id="passwordSignIn" name="password" /><br />
+      <input class="formButton button" type="submit" value="Sign In" />
+    </form>
+    <br />
+    <hr style="width: 80%" />
+    <br />
+    <span id="newUser">New User?</span><br />
+    <button id="signUpButton" class="formButton button">Sign Up</button>
+  </div>
+  <div id="signUpContainer" class="formContainer" style="display: none">
+    <form id="signUpForm" class="form">
       <h1>Sign Up</h1>
       <label for="firstName">First Name:</label><br />
       <input type="text" id="firstName" name="firstName" /><br />
@@ -29,8 +44,9 @@
         id="confirmPassword"
         name="confirmPassword"
       /><br />
-      <input type="submit" value="Sign Up" />
+      <input class="formButton button" type="submit" value="Sign Up" />
     </form>
   </div>
+
+  <script src="signUp.js"></script>
 </div>
-<script src="signUp.js"></script>
