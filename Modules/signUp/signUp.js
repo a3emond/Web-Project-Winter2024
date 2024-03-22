@@ -2,6 +2,7 @@ import { users } from "../../globalVariables.js";
 import { initializeUi } from "../../mainScript.js";
 export function initializeSignUp() {
   // signInForm
+
   document
     .getElementById("signInForm")
     .addEventListener("submit", function (event) {
@@ -22,9 +23,12 @@ export function initializeSignUp() {
         document.getElementById("passwordSignIn").style.borderColor = "red";
         return;
       }
-      // Set signedIn to true in localStorage
-      localStorage.setItem("signedIn", "true");
-      localStorage.setItem("username", user.username);
+      // Set signedIn to true in sessionStorage to be earased
+      //when the user closes the browser
+      sessionStorage.setItem("signedIn", "true");
+      sessionStorage.setItem("username", user.firstName + " " + user.lastName);
+      //keep active user in session storage for information update
+      sessionStorage.setItem("activeUser", JSON.stringify(user));
 
       //load UI
       initializeUi();
@@ -33,7 +37,20 @@ export function initializeSignUp() {
         user.username +
         "</h1>";
     });
+  //
+  //
   //new user sign up
+  document
+    .getElementById("cancelButton")
+    .addEventListener("click", function (event) {
+      // Prevent the form from submitting normally
+      event.preventDefault();
+      //hide signUp form
+      document.getElementById("signUpContainer").style.display = "none";
+      // Show sign in form
+      document.getElementById("signInContainer").style.display = "block";
+    });
+
   document
     .getElementById("signUpButton")
     .addEventListener("click", function () {
@@ -55,14 +72,7 @@ export function initializeSignUp() {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
       let confirmPassword = document.getElementById("confirmPassword").value;
-      console.log(
-        firstName,
-        lastName,
-        email,
-        username,
-        password,
-        confirmPassword
-      );
+
       //check for empty fields
       if (
         firstName === "" ||
@@ -96,8 +106,13 @@ export function initializeSignUp() {
         username: username,
         password: password,
         role: "user",
+        cart: [],
       };
+      // Add user to users array (update global variable)
       users.push(user);
+      // Save user to local storage
+      localStorage.setItem("users", JSON.stringify(users));
+      //bring user back to sign in form
       document.getElementById("signUpContainer").style.display = "none";
       document.getElementById("signInContainer").style.display = "block";
     });

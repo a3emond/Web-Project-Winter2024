@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 export function primeInit() {
-  if (localStorage.getItem("signedIn") !== "true") {
+  if (sessionStorage.getItem("signedIn") !== "true") {
     fetch("Modules/signUp/signUp.html")
       .then((response) => response.text())
       .then((data) => {

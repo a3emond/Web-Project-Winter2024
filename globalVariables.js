@@ -48,11 +48,22 @@ export function InitializeData() {
           user.email,
           user.username,
           user.password,
-          user.role
+          user.role,
+          user.cart
         );
         users.push(userItem);
       }
     });
+  //fetch users from local storage
+  let lcalStorageUsers = [];
+  lcalStorageUsers = retrieveUsersFromLocalStorage();
+  if (lcalStorageUsers === null) {
+    return;
+  }
+  for (let user of lcalStorageUsers) {
+    users.push(user);
+    console.log(user);
+  }
 }
 
 //
@@ -108,6 +119,15 @@ function createUserItem(
     username: username,
     password: password,
     role: role,
+    cart: [],
+    deliveryAdress: "",
+    paymentInfo: "",
   };
   return userItem;
+}
+
+//function to retrieve users in local storage
+function retrieveUsersFromLocalStorage() {
+  let users = JSON.parse(localStorage.getItem("users"));
+  return users;
 }

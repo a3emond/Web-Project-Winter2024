@@ -6,7 +6,11 @@
       "email": "a3emond@gmail.com",
       "firstName": "Alex",
       "lastName": "Emond",
-      "role": "admin"
+      "role": "admin",
+      "cart": [],
+      "deliveryAddress": "",
+      "billingAddress": "",
+      "paymentInfo": ""
     }
   ]
 }

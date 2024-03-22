@@ -9,14 +9,14 @@ export function initializeNavbar() {
   let time = document.getElementById("time");
   let mainDisplay = document.getElementById("main");
   document.getElementById("username").textContent =
-    "Bonjour, " + localStorage.getItem("username");
+    "Bonjour, " + sessionStorage.getItem("username");
 
   //logout
   document.getElementById("logOut").addEventListener("click", function () {
     console.log("logging out");
-    // Clear localStorage
-    localStorage.clear();
-    localStorage.setItem("signedIn", "false");
+    // Clear session storage
+    sessionStorage.clear();
+    sessionStorage.setItem("signedIn", "false");
     // reload index.html
     primeInit();
     location.reload();
