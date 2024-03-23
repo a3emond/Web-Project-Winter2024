@@ -65,5 +65,8 @@ export function initializeNavbar() {
   }
   updateTime(); // Call the function once to start the timer
   setInterval(updateTime, 1000); // Call the function every second
+  cartCount.textContent = JSON.parse(
+    sessionStorage.getItem("activeUser")
+  ).cart.length;
 }
 // greet user

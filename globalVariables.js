@@ -37,23 +37,25 @@ export function InitializeData() {
     });
 
   //fetch users data
-  fetch("../../DataStorage/usersInfo.json")
-    .then((response) => response.json())
-    .then((data) => {
-      for (let user of data.users) {
-        let userItem = createUserItem(
-          user.id,
-          user.firstName,
-          user.lastName,
-          user.email,
-          user.username,
-          user.password,
-          user.role,
-          user.cart
-        );
-        users.push(userItem);
-      }
-    });
+  if (localStorage.getItem("users") === null) {
+    fetch("../../DataStorage/usersInfo.json")
+      .then((response) => response.json())
+      .then((data) => {
+        for (let user of data.users) {
+          user = createUserItem(
+            user.id,
+            user.firstName,
+            user.lastName,
+            user.email,
+            user.username,
+            user.password,
+            user.role,
+            user.cart
+          );
+          users.push(user);
+        }
+      });
+  }
   //fetch users from local storage
   let lcalStorageUsers = [];
   lcalStorageUsers = retrieveUsersFromLocalStorage();
@@ -61,10 +63,12 @@ export function InitializeData() {
     return;
   }
   for (let user of lcalStorageUsers) {
-    users.push(user);
-    console.log(user);
+    if (!users.includes(user)) {
+      users.push(user);
+    }
   }
 }
+console.log(users);
 
 //
 //t-shirts items
@@ -82,7 +86,7 @@ function createItem(productId, productName, description, price, imgPath) {
         <h3>${productName}</h3>
         <p>${description}</p>
         <p>${price}</p>
-        <button class="addToCart" >Add to cart</button>
+        <button class="addToCart" data-product-id="${productId}">Add to cart</button>
       `;
   return item;
 }
@@ -109,9 +113,12 @@ function createUserItem(
   email,
   username,
   password,
-  role
+  role,
+  cart,
+  deliveryAdress,
+  paymentInfo
 ) {
-  let userItem = {
+  let user = {
     id: userId,
     firstName: firstName,
     lastName: lastName,
@@ -119,11 +126,11 @@ function createUserItem(
     username: username,
     password: password,
     role: role,
-    cart: [],
-    deliveryAdress: "",
-    paymentInfo: "",
+    cart: cart,
+    deliveryAdress: deliveryAdress,
+    paymentInfo: paymentInfo,
   };
-  return userItem;
+  return user;
 }
 
 //function to retrieve users in local storage

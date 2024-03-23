@@ -29,6 +29,7 @@ export function initializeSignUp() {
       sessionStorage.setItem("username", user.firstName + " " + user.lastName);
       //keep active user in session storage for information update
       sessionStorage.setItem("activeUser", JSON.stringify(user));
+      console.log("active user: " + sessionStorage.getItem("activeUser"));
 
       //load UI
       initializeUi();
@@ -100,6 +101,7 @@ export function initializeSignUp() {
       }
       // Create user object
       let user = {
+        id: users.length + 1,
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -110,7 +112,7 @@ export function initializeSignUp() {
       };
       // Add user to users array (update global variable)
       users.push(user);
-      // Save user to local storage
+      // Save users to local storage
       localStorage.setItem("users", JSON.stringify(users));
       //bring user back to sign in form
       document.getElementById("signUpContainer").style.display = "none";
