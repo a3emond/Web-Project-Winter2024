@@ -1,0 +1,52 @@
+@import url(../../mainStyle.css);
+
+#contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  background-color: var(--buttonDark);
+  color: azure;
+}
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+label {
+  margin: 10px 0;
+}
+textarea {
+  margin: 10px 0;
+  height: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+#contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  background-color: var(--buttonDark);
+  color: azure;
+}
+p {
+  margin: 10px 0;
+}

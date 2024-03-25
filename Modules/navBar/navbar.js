@@ -1,6 +1,8 @@
 import { initializeShop } from "../shop/shop.js";
 import { primeInit } from "../../mainScript.js";
 import { InitializeCart } from "../cart/cart.js";
+import { InitializeContact } from "../contact/contact.js";
+
 export function initializeNavbar() {
   let btnShop = document.getElementById("btnShop");
   let btnAbout = document.getElementById("btnAbout");
@@ -49,6 +51,7 @@ export function initializeNavbar() {
       .then((response) => response.text())
       .then((data) => {
         mainDisplay.innerHTML = data;
+        InitializeContact();
       });
   });
 
