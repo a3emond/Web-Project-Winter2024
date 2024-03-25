@@ -1,0 +1,242 @@
+<link rel="stylesheet" href="Modules/checkout/checkout.css" />
+<div class="container">
+  <div class="checkoutContainer">
+    <div class="deliveryInfo">
+      <h2>Delivery Information</h2>
+
+      <div class="deliveryInfoForm">
+        <form id="checkoutForm">
+          <table>
+            <tr>
+              <td colspan="2"><div id="deliverySavedInfo"></div></td>
+            </tr>
+            <tr>
+              <td><label for="country">Country</label></td>
+              <td>
+                <select id="country" class="form-control" name="country">
+                  <option>--Select--</option>
+                  <option value="CAN">Canada</option>
+                  <option value="USA">United States</option>
+                  <option value="GBR">United Kingdom</option>
+                  <option value="AUS">Australia</option>
+                  <option value="JPN">Japan</option>
+                  <option value="GER">Germany</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="province/state">Province/State</label></td>
+              <td>
+                <select id="state" class="form-control" name="state">
+                  <!--options defined in js selon le pays-->
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="city">City</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  name="city"
+                  pattern="[A-Za-z\s]+"
+                  title="Letters and spaces only"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="address">Address</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  name="address"
+                  pattern="\S+.*"
+                  title="Address should not start with a space"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="postalCode">Postal Code</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="postalCode"
+                  name="postalCode"
+                  pattern="[A-Za-z0-9\s]+"
+                  title="Only letters, numbers and spaces allowed"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="phone">Phone</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  pattern="\d{10}"
+                  title="Phone number should be 10 digits long"
+                />
+              </td>
+            </tr>
+            <tfoot>
+              <tr>
+                <td colspan="2">
+                  <button id="save" type="submit" class="button btn-primary">
+                    Save
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <div class="paymentMethod">
+      <h2>Payment Method</h2>
+      <div class="paymentMethodForm">
+        <form id="paymentMethodForm">
+          <table>
+            <tr>
+              <td colspan="2">
+                <div id="visaMastercard">
+                  <img
+                    src="Assets/others/visa.png"
+                    alt="visa"
+                    style="background-color: azure"
+                  />
+                  <input
+                    type="radio"
+                    id="visa"
+                    name="paymentMethod"
+                    value="visa"
+                  />
+                  <img src="Assets/others/mastercard.png" alt="mastercard" />
+                  <input
+                    type="radio"
+                    id="mastercard"
+                    name="paymentMethod"
+                    value="mastercard"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cardNumber">Card Number</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  name="cardNumber"
+                  pattern="\d{16}"
+                  title="Card number should be 16 digits long"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cardHolder">Card Holder</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardHolder"
+                  name="cardHolder"
+                  pattern="[A-Za-z\s]+"
+                  title="Only letters and spaces allowed"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="expirationDate">Expiration Date</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="expirationDate"
+                  name="expirationDate"
+                  pattern="(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})"
+                  title="MM/YYYY or MM/YY"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="cvv">CVV</label></td>
+              <td>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvv"
+                  name="cvv"
+                  pattern="\d{3}"
+                  title="CVV should be 3 digits long"
+                />
+              </td>
+            </tr>
+            <tfoot>
+              <tr>
+                <td colspan="2">
+                  <button
+                    id="savePaymentMethod"
+                    type="submit"
+                    class="button btn-primary"
+                  >
+                    Save
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="reciep">
+    <table id="itemTable">
+      <tr>
+        <th>Product</th>
+        <th>Color</th>
+        <th>Total</th>
+      </tr>
+    </table>
+    <hr />
+    <table>
+      <tr>
+        <td>Subtotal</td>
+        <td id="subTotal"></td>
+      </tr>
+      <tr>
+        <td>TPS</td>
+        <td id="tps"></td>
+      </tr>
+      <tr>
+        <td>TVQ</td>
+        <td id="tvq"></td>
+      </tr>
+      <tr>
+        <td>Total</td>
+        <td style="border-top: solid 1px white" id="total"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td colspan="2">
+          <button id="checkoutButton" class="button btn-primary">
+            Checkout
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script src="Modules/checkout/deliveryInfo.js"></script>
+<script src="Modules/checkout/checkout.js"></script>
+<script src="Modules/checkoout/paymentMethod.js"></script>
+<script src="Modules/checkout/reciep.js"></script>

@@ -1,8 +1,18 @@
 import { products, colors, InitializeData } from "./globalVariables.js";
 import { initializeNavbar } from "./Modules/navBar/navbar.js";
 import { initializeSignUp } from "./Modules/signUp/signUp.js";
+import { InitializeCheckout } from "./Modules/checkout/checkout.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  //
+  //sessionStorage.clear();
+  //localStorage.clear();
+  //temp workingOn page load
+  //
+  // insert un fetch ici pour travailler dessus
+  //
+  //
+  //
   //initialize data
   InitializeData();
   primeInit();

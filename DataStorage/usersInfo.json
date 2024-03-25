@@ -9,9 +9,9 @@
       "lastName": "Emond",
       "role": "admin",
       "cart": [],
-      "deliveryAddress": "",
+      "deliveryAddress": [],
       "billingAddress": "",
-      "paymentInfo": ""
+      "paymentInfo": []
     }
   ]
 }

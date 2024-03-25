@@ -1,1 +1,40 @@
-<h1>cart</h1>
+<link rel="stylesheet" href="../../Modules/cart/cart.css" />
+<div class="CartContainer">
+  <!--Items Table Section-->
+  <div class="cartItems">
+    <table class="cartTable">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Price</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td colspan="2" id="cartTotalPrice"></td>
+        </tr>
+        <tr>
+          <td colspan="2">TPS</td>
+          <td colspan="2" id="tps"></td>
+        </tr>
+        <tr>
+          <td colspan="2">TVQ</td>
+          <td colspan="2" id="tvq"></td>
+        </tr>
+        <tr>
+          <td colspan="2">Grand Total</td>
+          <td colspan="2" id="grandTotal"></td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <button id="checkoutLink" class="button">Checkout</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script src="../../Modules/cart/cart.js"></script>

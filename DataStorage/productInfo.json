@@ -6,7 +6,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\teePewPewBrand.png"
+      "image": "Assets\\products\\productImage\\teePewPewBrand.png",
+      "color": "#000000"
     },
     {
       "id": "logo2",
@@ -14,7 +15,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\teePewPewBrand2.png"
+      "image": "Assets\\products\\productImage\\teePewPewBrand2.png",
+      "color": "#000000"
     },
     {
       "id": 1,
@@ -22,7 +24,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee1.png"
+      "image": "Assets\\products\\productImage\\tee1.png",
+      "color": "#000000"
     },
     {
       "id": 2,
@@ -30,7 +33,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee2.png"
+      "image": "Assets\\products\\productImage\\tee2.png",
+      "color": "#000000"
     },
     {
       "id": 3,
@@ -38,7 +42,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee3.png"
+      "image": "Assets\\products\\productImage\\tee3.png",
+      "color": "#000000"
     },
     {
       "id": 4,
@@ -46,7 +51,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee4.png"
+      "image": "Assets\\products\\productImage\\tee4.png",
+      "color": "#000000"
     },
     {
       "id": 5,
@@ -54,7 +60,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee5.png"
+      "image": "Assets\\products\\productImage\\tee5.png",
+      "color": "#000000"
     },
     {
       "id": 6,
@@ -62,7 +69,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee6.png"
+      "image": "Assets\\products\\productImage\\tee6.png",
+      "color": "#000000"
     },
     {
       "id": 7,
@@ -70,7 +78,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee7.png"
+      "image": "Assets\\products\\productImage\\tee7.png",
+      "color": "#000000"
     },
     {
       "id": 8,
@@ -78,7 +87,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee8.png"
+      "image": "Assets\\products\\productImage\\tee8.png",
+      "color": "#000000"
     },
     {
       "id": 9,
@@ -86,7 +96,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee9.png"
+      "image": "Assets\\products\\productImage\\tee9.png",
+      "color": "#000000"
     },
     {
       "id": 10,
@@ -94,7 +105,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee10.png"
+      "image": "Assets\\products\\productImage\\tee10.png",
+      "color": "#000000"
     },
     {
       "id": 11,
@@ -102,7 +114,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee11.png"
+      "image": "Assets\\products\\productImage\\tee11.png",
+      "color": "#000000"
     },
     {
       "id": 12,
@@ -110,7 +123,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee12.png"
+      "image": "Assets\\products\\productImage\\tee12.png",
+      "color": "#000000"
     },
     {
       "id": 13,
@@ -118,7 +132,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee13.png"
+      "image": "Assets\\products\\productImage\\tee13.png",
+      "color": "#000000"
     },
     {
       "id": 14,
@@ -126,7 +141,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee14.png"
+      "image": "Assets\\products\\productImage\\tee14.png",
+      "color": "#000000"
     },
     {
       "id": 15,
@@ -134,7 +150,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee15.png"
+      "image": "Assets\\products\\productImage\\tee15.png",
+      "color": "#000000"
     },
     {
       "id": 16,
@@ -142,7 +159,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee16.png"
+      "image": "Assets\\products\\productImage\\tee16.png",
+      "color": "#000000"
     },
     {
       "id": 17,
@@ -150,7 +168,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee17.png"
+      "image": "Assets\\products\\productImage\\tee17.png",
+      "color": "#000000"
     },
     {
       "id": 18,
@@ -158,7 +177,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee18.png"
+      "image": "Assets\\products\\productImage\\tee18.png",
+      "color": "#000000"
     },
     {
       "id": 19,
@@ -166,7 +186,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee19.png"
+      "image": "Assets\\products\\productImage\\tee19.png",
+      "color": "#000000"
     },
     {
       "id": 20,
@@ -174,7 +195,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee20.png"
+      "image": "Assets\\products\\productImage\\tee20.png",
+      "color": "#000000"
     },
     {
       "id": 21,
@@ -182,7 +204,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee21.png"
+      "image": "Assets\\products\\productImage\\tee21.png",
+      "color": "#000000"
     },
     {
       "id": 22,
@@ -190,7 +213,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee22.png"
+      "image": "Assets\\products\\productImage\\tee22.png",
+      "color": "#000000"
     },
     {
       "id": 23,
@@ -198,7 +222,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee23.png"
+      "image": "Assets\\products\\productImage\\tee23.png",
+      "color": "#000000"
     },
     {
       "id": 24,
@@ -206,7 +231,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee24.png"
+      "image": "Assets\\products\\productImage\\tee24.png",
+      "color": "#000000"
     },
     {
       "id": 25,
@@ -214,7 +240,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee25.png"
+      "image": "Assets\\products\\productImage\\tee25.png",
+      "color": "#000000"
     },
     {
       "id": 26,
@@ -222,7 +249,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee26.png"
+      "image": "Assets\\products\\productImage\\tee26.png",
+      "color": "#000000"
     },
     {
       "id": 27,
@@ -230,7 +258,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee27.png"
+      "image": "Assets\\products\\productImage\\tee27.png",
+      "color": "#000000"
     },
     {
       "id": 28,
@@ -238,7 +267,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee28.png"
+      "image": "Assets\\products\\productImage\\tee28.png",
+      "color": "#000000"
     },
     {
       "id": 29,
@@ -246,7 +276,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee29.png"
+      "image": "Assets\\products\\productImage\\tee29.png",
+      "color": "#000000"
     },
     {
       "id": 30,
@@ -254,7 +285,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee30.png"
+      "image": "Assets\\products\\productImage\\tee30.png",
+      "color": "#000000"
     },
     {
       "id": 31,
@@ -262,7 +294,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee31.png"
+      "image": "Assets\\products\\productImage\\tee31.png",
+      "color": "#000000"
     },
     {
       "id": 32,
@@ -270,7 +303,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee32.png"
+      "image": "Assets\\products\\productImage\\tee32.png",
+      "color": "#000000"
     },
     {
       "id": 33,
@@ -278,7 +312,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee33.png"
+      "image": "Assets\\products\\productImage\\tee33.png",
+      "color": "#000000"
     },
     {
       "id": 34,
@@ -286,7 +321,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee34.png"
+      "image": "Assets\\products\\productImage\\tee34.png",
+      "color": "#000000"
     },
     {
       "id": 35,
@@ -294,7 +330,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee35.png"
+      "image": "Assets\\products\\productImage\\tee35.png",
+      "color": "#000000"
     },
     {
       "id": 36,
@@ -302,7 +339,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee36.png"
+      "image": "Assets\\products\\productImage\\tee36.png",
+      "color": "#000000"
     },
     {
       "id": 37,
@@ -310,7 +348,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee37.png"
+      "image": "Assets\\products\\productImage\\tee37.png",
+      "color": "#000000"
     },
     {
       "id": 38,
@@ -318,7 +357,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee38.png"
+      "image": "Assets\\products\\productImage\\tee38.png",
+      "color": "#000000"
     },
     {
       "id": 39,
@@ -326,7 +366,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee39.png"
+      "image": "Assets\\products\\productImage\\tee39.png",
+      "color": "#000000"
     },
     {
       "id": 40,
@@ -334,7 +375,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee40.png"
+      "image": "Assets\\products\\productImage\\tee40.png",
+      "color": "#000000"
     },
     {
       "id": 41,
@@ -342,7 +384,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee41.png"
+      "image": "Assets\\products\\productImage\\tee41.png",
+      "color": "#000000"
     },
     {
       "id": 42,
@@ -350,7 +393,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee42.png"
+      "image": "Assets\\products\\productImage\\tee42.png",
+      "color": "#000000"
     },
     {
       "id": 43,
@@ -358,7 +402,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee43.png"
+      "image": "Assets\\products\\productImage\\tee43.png",
+      "color": "#000000"
     },
     {
       "id": 44,
@@ -366,7 +411,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee44.png"
+      "image": "Assets\\products\\productImage\\tee44.png",
+      "color": "#000000"
     },
     {
       "id": 45,
@@ -374,7 +420,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee45.png"
+      "image": "Assets\\products\\productImage\\tee45.png",
+      "color": "#000000"
     },
     {
       "id": 46,
@@ -382,7 +429,8 @@
       "price": 19.99,
       "description": "T-shirt manches courtes Unisex.",
       "category": "PewPew",
-      "image": "Assets\\products\\productImage\\tee46.png"
+      "image": "Assets\\products\\productImage\\tee46.png",
+      "color": "#000000"
     }
   ]
 }

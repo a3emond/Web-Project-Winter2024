@@ -1,6 +1,5 @@
-//import global variables
-import { products, colors, users } from "../../globalVariables.js";
-//initialize shop
+import { InitializeCart } from "../cart/cart.js";
+import { products, tShirts, colors, users } from "../../globalVariables.js";
 export function initializeShop() {
   // Loop through the products array
   for (let item of products) {
@@ -27,37 +26,21 @@ export function initializeShop() {
   }
 }
 
-//color picker functions
-let tshirt;
-function changeTshirtColor(colorHex, event) {
-  var panel = event.currentTarget.parentElement;
-  console.log(panel);
-  tshirt.style.backgroundColor = colorHex;
-  panel.style.display = "none";
-}
-
-function openColorPanel(event) {
-  tshirt = event.currentTarget.parentElement.parentElement.querySelector("img");
-  if (colorPanel.style.display === "flex") {
-    colorPanel.style.display = "none";
-  } else {
-    colorPanel.style.display = "flex";
-    colorPanel.style.top = event.pageY + 10 + "px";
-    colorPanel.style.left = event.pageX + 10 + "px";
-  }
-}
-
 //add to cart functions
 
 function addToCart(event) {
+  // Get main display from index.html
+  let mainDisplay = document.getElementById("main");
   // show / hide panel
   let addedPanel = document.querySelector(".addedToCartPanel");
   ShowHidePanel(event);
   // Get the product ID from the button's data attribute
   var productId = event.target.dataset.productId;
   // Find the product in the products array
-  var product = products.find((product) => product.id == productId);
+  var product = tShirts.find((product) => product.id == productId);
+  console.log(product);
   //panel controls
+  //ok Button
   if (!okButton.hasEventListener) {
     okButton.addEventListener("click", () => {
       addedPanel.style.display = "none";
@@ -66,24 +49,38 @@ function addToCart(event) {
       // Add the product to the active user's cart
       activeUser.cart.push(product);
       // Update the active user and users array in storage
-      localStorage.setItem("users", JSON.stringify(users));
       sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
       // Update the cart count in the header
       document.getElementById("cartCount").innerHTML = activeUser.cart.length;
     });
     okButton.hasEventListener = true;
   }
+  //concel Button
   if (!cancelButton.hasEventListener) {
     cancelButton.addEventListener("click", () => {
       addedPanel.style.display = "none";
     });
     cancelButton.hasEventListener = true;
   }
+  //go to cart Button
   if (!goToCartButton.hasEventListener) {
-    goToCartButton.addEventListener("click", () => {});
+    goToCartButton.addEventListener("click", function () {
+      fetch("Modules/cart/cart.html")
+        .then((response) => response.text())
+        .then((data) => {
+          mainDisplay.innerHTML = data;
+          InitializeCart();
+        });
+    });
     goToCartButton.hasEventListener = true;
   }
 }
+//
+//
+//utility functions
+//
+//
+//show / hide panel (added to cart)
 function ShowHidePanel(event) {
   let addedPanel = document.querySelector(".addedToCartPanel");
   if (addedPanel.style.display === "block") {
@@ -99,4 +96,34 @@ function ShowHidePanel(event) {
   cancelButton.dataset.hasEventListener = false;
   let goToCartButton = document.getElementById("goToCartButton");
   goToCartButton.dataset.hasEventListener = false;
+}
+//color picker functions
+let tshirt;
+function changeTshirtColor(colorHex, event) {
+  var panel = event.currentTarget.parentElement;
+  //get tshirt name
+  //probleme icit!!!!
+  let itemName = tshirt.parentElement.querySelector("h3").innerHTML;
+
+  console.log(itemName);
+  //change tshirt color in the tShirts array
+  tShirts.find((product) => product.name == itemName).color = colorHex;
+
+  //visualy change tshirt color
+  tshirt.style.backgroundColor = colorHex;
+  console.log(tshirt);
+  //hide color panel
+  panel.style.display = "none";
+}
+//show / hide color panel
+function openColorPanel(event) {
+  tshirt = event.currentTarget.parentElement.parentElement.querySelector("img");
+
+  if (colorPanel.style.display === "flex") {
+    colorPanel.style.display = "none";
+  } else {
+    colorPanel.style.display = "flex";
+    colorPanel.style.top = event.pageY + 10 + "px";
+    colorPanel.style.left = event.pageX + 10 + "px";
+  }
 }

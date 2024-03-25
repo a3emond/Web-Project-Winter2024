@@ -1,12 +1,14 @@
-export const products = [];
-export const colors = [];
-export const users = [];
+export const products = []; //contains divs of products
+export const tShirts = []; //contains t-shirts objects
+export const colors = []; //contains color objects
+export const users = []; //contains user objects
 export function InitializeData() {
   //fetch t-shirts data
   fetch("../../DataStorage/productInfo.json")
     .then((response) => response.json())
     .then((data) => {
       for (let product of data.products) {
+        tShirts.push(product);
         let item = createItem(
           product.id,
           product.name,
@@ -17,6 +19,9 @@ export function InitializeData() {
         products.push(item);
       }
     });
+  console.log(products);
+  console.log(tShirts);
+
   //fetch skateboards data
   //
   //to implement..
@@ -50,7 +55,9 @@ export function InitializeData() {
             user.username,
             user.password,
             user.role,
-            user.cart
+            user.cart,
+            user.deliveryAddress,
+            user.paymentInfo
           );
           users.push(user);
         }
@@ -68,7 +75,6 @@ export function InitializeData() {
     }
   }
 }
-console.log(users);
 
 //
 //t-shirts items
@@ -115,7 +121,7 @@ function createUserItem(
   password,
   role,
   cart,
-  deliveryAdress,
+  deliveryAddress,
   paymentInfo
 ) {
   let user = {
@@ -127,7 +133,7 @@ function createUserItem(
     password: password,
     role: role,
     cart: cart,
-    deliveryAdress: deliveryAdress,
+    deliveryAdress: deliveryAddress,
     paymentInfo: paymentInfo,
   };
   return user;
