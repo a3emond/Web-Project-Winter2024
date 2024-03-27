@@ -2,6 +2,7 @@ import { initializeShop } from "../shop/shop.js";
 import { primeInit } from "../../mainScript.js";
 import { InitializeCart } from "../cart/cart.js";
 import { InitializeContact } from "../contact/contact.js";
+import { InitializeAbout } from "../about/about.js";
 
 export function initializeNavbar() {
   let btnShop = document.getElementById("btnShop");
@@ -43,6 +44,7 @@ export function initializeNavbar() {
       .then((response) => response.text())
       .then((data) => {
         mainDisplay.innerHTML = data;
+        InitializeAbout();
       });
   });
 

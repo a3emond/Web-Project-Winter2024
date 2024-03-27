@@ -1,4 +1,14 @@
+@import url(../../mainStyle.css);
 #aboutContainer {
   display: flex;
   justify-content: center;
+}
+area {
+  cursor: pointer;
+}
+#siteMapImage {
+  margin: 20px;
+  border-radius: 3%;
+  border: solid 2px var(--accent);
+  box-shadow: 0 0 10px var(--accent);
 }
