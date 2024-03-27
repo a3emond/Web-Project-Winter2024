@@ -1,5 +1,5 @@
 export function InitializeAbout() {
   console.log("About module initialized");
-  let image = $("#siteMapImage");
+  let image = window.$("#siteMapImage");
   console.log(image);
 }
