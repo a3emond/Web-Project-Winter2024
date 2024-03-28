@@ -36,6 +36,8 @@ export function InitializeCart() {
     sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
     let row = tableItems.children[index];
     row.remove();
+    //update total price
+    UpdateTotalPrice();
     //update cartCount
     initializeNavbar();
   }
