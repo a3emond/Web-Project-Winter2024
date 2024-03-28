@@ -12,3 +12,6 @@ area {
   border: solid 2px var(--accent);
   box-shadow: 0 0 10px var(--accent);
 }
+.aboutContent {
+  width: 500px;
+}
