@@ -1,5 +1,13 @@
 @import url("../../mainStyle.css");
-
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
 .container1 {
   display: flex;
   flex-wrap: wrap;

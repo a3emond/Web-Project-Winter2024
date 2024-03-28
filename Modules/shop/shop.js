@@ -24,8 +24,49 @@ export function initializeShop() {
       changeTshirtColor(colorItem.hex, event)
     );
   }
+  document
+    .getElementById("searchButton")
+    .addEventListener("click", function () {
+      let query = document.getElementById("searchInput").value;
+      searchProducts(query);
+    });
+  document.getElementById("searchInput").addEventListener("input", function () {
+    let query = document.getElementById("searchInput").value;
+    if (query === "") {
+      searchProducts("");
+    }
+  });
 }
+//search function
+function searchProducts(query) {
+  // Convert the query to lower case
+  query = query.toLowerCase();
+  console.log(query);
 
+  // Get the container div
+  let container = document.getElementById("container");
+
+  // Get all child divs of the container
+  let productDivs = container.children;
+  console.log(productDivs);
+
+  // Loop through the product divs
+  for (let i = 0; i < productDivs.length; i++) {
+    // Get the product name
+    let productName = productDivs[i]
+      .getElementsByTagName("h3")[0]
+      .textContent.toLowerCase();
+
+    // Check if the product name includes the query
+    if (productName.includes(query)) {
+      // If it does, show the product div
+      productDivs[i].style.display = "";
+    } else {
+      // If it doesn't, hide the product div
+      productDivs[i].style.display = "none";
+    }
+  }
+}
 //add to cart functions
 
 function addToCart(event) {
