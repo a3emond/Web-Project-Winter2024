@@ -41,15 +41,18 @@ function addTemporaryContentToChildDivs() {
   let divs = $(".aboutContent div");
   divs.each(function () {
     let id = $(this).attr("id");
-    $(this).append("<h2>" + $(this).attr("id") + "</h2>");
+    $(this).append("<h2>" + $(this).attr("id") + "</h2>" + "<br/><br/>");
     $(this).append(addContent(id));
     console.log($(this).attr("id"));
 
     $(this).css({
       color: "white",
-      border: "1px solid white",
+      border: "1px solid #e94560",
+      borderRadius: "10px",
+      boxShadow: "0 0 10px #e94560",
       padding: "10px",
       margin: "10px",
+      backgroundColor: "#232931",
     });
   });
 }
