@@ -12,6 +12,32 @@
       "deliveryAddress": [],
       "billingAddress": "",
       "paymentInfo": []
+    },
+    {
+      "id": "2",
+      "username": "a.emond@proj.ca",
+      "password": "3742",
+      "email": "a3emond@gmail.com",
+      "firstName": "Alexandre",
+      "lastName": "Emond",
+      "role": "admin",
+      "cart": [],
+      "deliveryAddress": [],
+      "billingAddress": "",
+      "paymentInfo": []
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "password": "12345",
+      "email": "admin@gmail.com",
+      "firstName": "Monsieur",
+      "lastName": "LeProfesseur",
+      "role": "admin",
+      "cart": [],
+      "deliveryAddress": [],
+      "billingAddress": "",
+      "paymentInfo": []
     }
   ]
 }

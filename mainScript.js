@@ -1,7 +1,6 @@
-import { products, colors, InitializeData } from "./globalVariables.js";
+import { InitializeData } from "./globalVariables.js";
 import { initializeNavbar } from "./Modules/navBar/navbar.js";
 import { initializeSignUp } from "./Modules/signUp/signUp.js";
-import { InitializeCheckout } from "./Modules/checkout/checkout.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   //

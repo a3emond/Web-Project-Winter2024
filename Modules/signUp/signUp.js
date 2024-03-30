@@ -23,7 +23,6 @@ export function initializeSignUp() {
         document.getElementById("passwordSignIn").style.borderColor = "red";
         return;
       }
-      // Set signedIn to true in sessionStorage to be earased
       //when the user closes the browser
       sessionStorage.setItem("signedIn", "true");
       sessionStorage.setItem("username", user.firstName + " " + user.lastName);

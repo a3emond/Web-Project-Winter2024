@@ -36,6 +36,12 @@ export function initializeShop() {
       searchProducts("");
     }
   });
+  let okButton = document.getElementById("okButton");
+  okButton.dataset.hasEventListener = false;
+  let cancelButton = document.getElementById("cancelButton");
+  cancelButton.dataset.hasEventListener = false;
+  let goToCartButton = document.getElementById("goToCartButton");
+  goToCartButton.dataset.hasEventListener = false;
 }
 //search function
 function searchProducts(query) {
@@ -131,12 +137,6 @@ function ShowHidePanel(event) {
     addedPanel.style.top = event.pageY + 10 + "px";
     addedPanel.style.left = event.pageX + 10 + "px";
   }
-  let okButton = document.getElementById("okButton");
-  okButton.dataset.hasEventListener = false;
-  let cancelButton = document.getElementById("cancelButton");
-  cancelButton.dataset.hasEventListener = false;
-  let goToCartButton = document.getElementById("goToCartButton");
-  goToCartButton.dataset.hasEventListener = false;
 }
 //color picker functions
 let tshirt;
