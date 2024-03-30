@@ -65,14 +65,39 @@ export function initializeNavbar() {
         InitializeCart();
       });
   });
-
+  sessionStorage.setItem("time", 0);
   //time functionnalities
+  var timeSpent = sessionStorage.getItem("time");
   function updateTime() {
-    time.textContent = new Date().toLocaleTimeString();
+    time.textContent =
+      new Date().toLocaleTimeString() +
+      "  --  " +
+      " Temps connecté: " +
+      secondsToTimeString(timeSpent++);
+    sessionStorage.setItem("time", timeSpent);
   }
   updateTime(); // Call the function once to start the timer
   setInterval(updateTime, 1000); // Call the function every second
   //update cart count
+  updateCartCount();
+}
+
+function secondsToTimeString(seconds) {
+  var hours = Math.floor(seconds / 3600); //math.floor rounds down to the nearest whole number
+  var minutes = Math.floor((seconds % 3600) / 60);
+  var remainingSeconds = seconds % 60; //% is the modulo operator, it returns the remainder of the division of the two operands
+
+  var timeString =
+    pad(hours, 2) + ":" + pad(minutes, 2) + ":" + pad(remainingSeconds, 2);
+  return timeString;
+}
+
+function pad(num, size) {
+  var s = "00" + num; //add 0s to the left of the number
+  return s.substr(s.length - size); //return the last size characters
+}
+
+export function updateCartCount() {
   cartCount.textContent = JSON.parse(
     sessionStorage.getItem("activeUser")
   ).cart.length;

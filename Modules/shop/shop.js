@@ -1,5 +1,6 @@
 import { InitializeCart } from "../cart/cart.js";
 import { products, tShirts, colors, users } from "../../globalVariables.js";
+import { updateCartCount } from "../navBar/navbar.js";
 export function initializeShop() {
   // Loop through the products array
   for (let item of products) {
@@ -85,20 +86,19 @@ function addToCart(event) {
   var productId = event.target.dataset.productId;
   // Find the product in the products array
   var product = tShirts.find((product) => product.id == productId);
-  console.log(product);
+  // Get the active user from the session storage
+  let activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+  // Add the product to the active user's cart
+  activeUser.cart.push(product);
+  // Update the active user and users array in storage
+  sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
+  // Update the cart count in the header
+  document.getElementById("cartCount").innerHTML = activeUser.cart.length;
   //panel controls
   //ok Button
   if (!okButton.hasEventListener) {
     okButton.addEventListener("click", () => {
       addedPanel.style.display = "none";
-      // Get the active user from the session storage
-      let activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
-      // Add the product to the active user's cart
-      activeUser.cart.push(product);
-      // Update the active user and users array in storage
-      sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
-      // Update the cart count in the header
-      document.getElementById("cartCount").innerHTML = activeUser.cart.length;
     });
     okButton.hasEventListener = true;
   }
@@ -106,6 +106,14 @@ function addToCart(event) {
   if (!cancelButton.hasEventListener) {
     cancelButton.addEventListener("click", () => {
       addedPanel.style.display = "none";
+      //remove last item from cart
+      let activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+      console.log(activeUser.cart);
+      activeUser.cart.pop();
+      console.log(activeUser.cart);
+      sessionStorage.setItem("activeUser", JSON.stringify(activeUser));
+      //update cart count
+      updateCartCount();
     });
     cancelButton.hasEventListener = true;
   }

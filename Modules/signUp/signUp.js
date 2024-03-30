@@ -32,6 +32,8 @@ export function initializeSignUp() {
 
       //load UI
       initializeUi();
+      sessionStorage.setItem("time", 0); //initialize time spent on site
+
       document.getElementById("mainContainer").innerHTML =
         "<h1 style='color:white; font-size: 50px;' >Welcome " +
         user.username +

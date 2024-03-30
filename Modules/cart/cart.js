@@ -1,7 +1,6 @@
 import { products, tShirts, colors, users } from "../../globalVariables.js";
 import { InitializeCheckout } from "../checkout/checkout.js";
-import { initializeNavbar } from "../navBar/navbar.js";
-
+import { updateCartCount } from "../navBar/navbar.js";
 export function InitializeCart() {
   let cart, tableItems, activeUser; // Declare variables
   //localStorage.clear();
@@ -12,6 +11,9 @@ export function InitializeCart() {
   //append items to table body
   activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
   cart = activeUser.cart;
+
+  //fill table with items
+  //append items to table body and add delete button and event listener
   tableItems = document.querySelector("tbody");
   cart.forEach((item) => {
     let colorName = FindColorName(item.color);
@@ -21,7 +23,7 @@ export function InitializeCart() {
           <td>${item.name}<br/>(${colorName})</td>
           <td>${item.price}</td>
           <td>
-            <button class="button btnDelete">Delete</button>
+            <button class="button btnDelete">Retirer</button>
           </td>
         `;
     let deleteButton = row.querySelector(".btnDelete");
@@ -39,7 +41,7 @@ export function InitializeCart() {
     //update total price
     UpdateTotalPrice();
     //update cartCount
-    initializeNavbar();
+    updateCartCount();
   }
   //checkout button
   let checkoutButton = document.getElementById("checkoutLink");
